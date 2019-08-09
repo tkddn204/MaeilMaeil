@@ -17,9 +17,13 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "preserve"
+    "sourceMap": true,
+    "jsx": "preserve",
+    "baseUrl": "src",
+    "outDir": "build",
+    "paths": {
+      "app/*": ["./app/*"]
+    }
   },
-  "include": [
-    "src"
-  ]
+  "exclude": ["build", "node_modules"]
 }
