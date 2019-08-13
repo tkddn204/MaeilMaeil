@@ -6,8 +6,9 @@ import { linkTo } from '@storybook/addon-links';
 
 import { Button, Welcome } from '@storybook/react/demo';
 
-import TodoItem from 'app/components/TodoItem';
 import CheckBox from 'app/components/Checkbox';
+import TodoItem from 'app/components/TodoItem';
+import TodoList from 'app/components/TodoList';
 
 storiesOf('Welcome', module).add('to Storybook', () => <Welcome showApp={linkTo('Button')} />);
 
@@ -32,3 +33,9 @@ storiesOf('TodoItem', module).add('default', () => <TodoItem todoModel={{
     id: "test-id-1",
     title: "테스트"
 }}/>);
+
+storiesOf('TodoList', module).add('default', () => <TodoList todoList={
+    [{id: "test-id-11", title: "hi"},{id: "test-id-12", title: "hi2"}]
+}>
+</TodoList>);
+

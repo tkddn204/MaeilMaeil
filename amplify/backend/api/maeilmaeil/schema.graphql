@@ -1,0 +1,11 @@
+type Todo @model {
+  todoId: ID!
+  userId: AWSEmail!
+  name: String!
+  description: String
+  createdDate: AWSDate
+  modifiedDate: AWSDate
+}
+
+scalar AWSDate
+scalar AWSEmail

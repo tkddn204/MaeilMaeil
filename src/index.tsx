@@ -5,6 +5,7 @@ import Index from './app/containers/App';
 import * as serviceWorker from './serviceWorker';
 
 const AppStyle = createGlobalStyle`
+    @import-normalize;
     body {
         margin: 0;
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',

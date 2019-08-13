@@ -1,8 +1,9 @@
 export interface TodoModel {
     id: string,
     title: string,
-    createdDate: Date,
-    modifiedDate: Date
+    content?: string
+    createdAt: Date,
+    modifiedAt: Date
 }
 
 export interface CheckTodoModel extends TodoModel{

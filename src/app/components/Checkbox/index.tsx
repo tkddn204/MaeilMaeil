@@ -1,20 +1,23 @@
 import React  from 'react';
 import styled  from "styled-components";
+import {Styled} from "../../../types/global";
 
-interface CheckboxProps {
+interface CheckboxProps extends Styled {
     checked?: boolean,
-    onToggle?(): void,
-    className?: string
+    onClick?(): void
 }
 
-const Checkbox = ({checked = false, onToggle, className} : CheckboxProps) => {
+const Checkbox = ({className, checked = false, onClick} : CheckboxProps) => {
     return (
-        <div className={className} onClick={onToggle}>
+        <div
+            className={className}
+            onClick={onClick}>
         </div>
     );
 };
 
 export default styled(Checkbox)`
+  display: inline-block;
   width: 20px;
   height: 20px;
   border: 1px solid black;

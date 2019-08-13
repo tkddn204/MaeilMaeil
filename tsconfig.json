@@ -15,15 +15,18 @@
     "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
-    "isolatedModules": true,
     "noEmit": true,
     "sourceMap": true,
     "jsx": "preserve",
     "baseUrl": "src",
     "outDir": "build",
-    "paths": {
-      "app/*": ["./app/*"]
-    }
+    "isolatedModules": true
   },
-  "exclude": ["build", "node_modules"]
+  "exclude": [
+    "build",
+    "node_modules"
+  ],
+  "include": [
+    "src"
+  ]
 }

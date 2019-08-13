@@ -1,10 +1,10 @@
 import React from 'react';
-import TodoItem from 'app/components/TodoItem'
+import TodoList from 'app/components/TodoList'
 
 const Index: React.FC = () => {
   return (
     <div className="App">
-      <TodoItem />
+      <TodoList />
     </div>
   );
 };

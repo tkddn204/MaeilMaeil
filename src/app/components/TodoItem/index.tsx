@@ -2,33 +2,29 @@ import React  from 'react';
 import styled from "styled-components";
 
 import Checkbox from "app/components/Checkbox";
-import {MaybeTodoModel} from "app/models/todoModels";
+import {TodoModel} from "app/models/todoModels";
+import {Styled} from "../../../types/global";
+import TodoContent from "app/components/TodoContent/TodoContent";
 
-type TodoItemProps = {
-    todoModel: MaybeTodoModel
-};
+interface TodoItemProps extends Styled {
+    todoModel: TodoModel
+}
 
-type TodoItemState = {
-    isChecked: false
-};
-
-const TodoItem = styled.div`
-  
-`;
-
-export default ({todoModel} : TodoItemProps) => {
+const TodoItem = ({className, todoModel} : TodoItemProps) => {
     const [isChecked, setState] = React.useState(false);
 
-    const onToggleCheckbox = () => {
+    const toggleCheckbox = () => {
         setState(!isChecked);
     };
 
     return (
-      <TodoItem>
-          <Checkbox checked={isChecked} onToggle={onToggleCheckbox}/>
-          <div>
-              {todoModel.title}
-          </div>
-      </TodoItem>
+        <div className={className}>
+            <Checkbox checked={isChecked} onClick={toggleCheckbox}/>
+            <TodoContent content={todoModel.title} />
+        </div>
     );
 }
+
+export default styled(TodoItem)`
+  
+`;
